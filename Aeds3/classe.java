@@ -8,7 +8,9 @@ import java.time.LocalDate;
 public class classe {
     // Atributos -----------------------------------
     private int show_id, release_year, contCast, contDirector;
-    private String[] type, director, cast, date;
+    String type;
+    private String[] director, cast;
+    String date;
     private LocalDate date_added;
 
     // Construtores ---------------------------------- 
@@ -55,14 +57,14 @@ public class classe {
     }
     public void setType(String type){
         this.type = type;
-    }
+    } 
 
     // CONTDIRECTOR
     public int getContDirector(){
         return contDirector;
     }
     public void setcontDirector(int contDirector){
-        this.qtdDirectors = contDirector;
+        this.contDirector = contDirector;
     }
 
     //  DIRECTOR
@@ -82,8 +84,8 @@ public class classe {
     public int getContCast(){
         return contCast;
     }
-    public void setQtdCast(int qtdCast){
-        this.qtdCast = contCast;
+    public void setcontCast(int contCast){
+        this.contCast = contCast;
     }
 
     // Cast
@@ -98,6 +100,30 @@ public class classe {
             this.cast[0] = "unknown"; // não informado
         }
     }
+
+    // DATE
+    public String getDateString(){
+        return date;
+    }
+    public void setDateString(String dateString){
+        this.date = dateString;
+    }
+
+    // DATE ADDED
+    public LocalDate getDate_added(){
+        return date_added;
+    }
+    public void setDate_added(String dateString){
+        this.date_added = LocalDate.parse(date);
+    }
+
+    // RELEASE YEAR
+    public int getRelease_year(){
+        return release_year;
+    }
+    public void setRelease_year(int release_year){
+        this.release_year = release_year;
+    } 
 
     // BYTE ARRAYS ----------------------
 
