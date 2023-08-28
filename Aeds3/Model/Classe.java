@@ -140,14 +140,14 @@ public class Classe {
          dt1.writeUTF(this.getType());
          dt1.writeInt(this.getContDirector());
 
-         for (int i = 0; i < this.getContDirector(); i++) {
-            dt1.writeUTF(this.getDirector()[i]);
-        }
+         //for (int i = 0; i < this.getContDirector(); i++) {
+            //dt1.writeUTF(this.getDirector()[i]);
+        //}
 
         dt1.writeInt(this.getContCast());
-        for (int i = 0; i < this.getContCast(); i++) {
+        /*for (int i = 0; i < this.getContCast(); i++) {
             dt1.writeUTF(this.getCast()[i]);
-        } 
+        } */
 
         dt1.writeUTF(this.getDateString());
         dt1.writeInt(this.getRelease_year());
@@ -185,9 +185,9 @@ public class Classe {
          this.date = dt2.readUTF();
          this.release_year = dt2.readInt();
  
-         //Completa os atributos que nao foram lidos
+         //Preenche os atributos que nao foram lidos do arquivo
          if(this.getDateString().equals("Não possui data")){
-             this.setDateString("1970-01-01");
+             this.setDateString("0101-01-01");
           }
           this.setDate_added(this.getDateString());
  
