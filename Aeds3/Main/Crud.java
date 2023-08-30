@@ -18,7 +18,7 @@ public class Crud{
         this.lastID = 0;
 
         try {
-            this.rf = new RandomAccessFile("banco.bin", "rw"); // cria o arquivo
+            this.rf = new RandomAccessFile("teste.bin", "rw"); // cria o arquivo
             if(rf.length() != 0) { // se o arquivo não ta vazio (le o ultimo id)
                 rf.seek(0);
                 lastID = rf.readInt();
@@ -30,6 +30,8 @@ public class Crud{
     }
 
 
+
+    
     // CONVERTER PARA BINÁRIO
     public void conBinario(Classe classe) {
         BufferedReader br = null;
@@ -70,8 +72,7 @@ public class Crud{
     }
 
     // CREATE
-
-public void create(Classe netflix) {
+    public void create(Classe netflix) {
 
 }
 
