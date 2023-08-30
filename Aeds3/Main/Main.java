@@ -10,6 +10,9 @@ public class Main{
         Crud crud = new Crud();
         Scanner sc = new Scanner(System.in);
 
+        String input = "";
+        boolean sair = false; // controle do menu
+
 
         crud.conBinario(classe); // converte o arquivo csv para binario
         
