@@ -1,13 +1,14 @@
 package Main;
 
+import java.text.ParseException;
 import Model.Classe;
 
 
 public class NetflixParser extends Crud {
 
-
+    ////////////////////////////////////////////////////
     // fazer a leitura do CSV
-    public static void lerCSV(String line, Classe classe) {
+    public static void lerCSV(String line, Classe classe) throws ParseException{
         String x1 = ""; // string auxiliar
         int pont1 = 0; // ponteiro
 
@@ -197,6 +198,45 @@ public class NetflixParser extends Crud {
         x1 = "";
         
         // 
+    }
+
+  // PRINT
+     public static void print(Classe classe) {
+        // imprime o id do registro
+        if (classe.getShow_id() < 10) {
+            System.out.println("_REGISTRO " + "000" + classe.getShow_id() + "___");
+        } else if (classe.getShow_id() < 100) {
+            System.out.println("_REGISTRO " + "00" + classe.getShow_id() + "___");
+        } else if (classe.getShow_id() < 1000) {
+            System.out.println("_REGISTRO " + "0" + classe.getShow_id() + "___");
+        } else {
+            System.out.println("_REGISTRO " + classe.getShow_id() + "___");
+        }
+        // imprime os dados do registro
+        System.out.println("ID: " + classe.getShow_id());
+        System.out.println("Tipo: " + classe.getType());
+        System.out.println("Diretores: " + classe.getContDirector());
+        if (classe.getContDirector() > 0) {
+            for (int i = 0; i < classe.getContDirector(); i++) {
+                System.out.println("Diretor " + (i + 1) + ": " + classe.getDirector()[i]);
+            }
+        }   
+        System.out.println("Elenco: " + classe.getContCast());
+        if (classe.getContCast() > 0) {
+            for (int i = 0; i < classe.getContCast(); i++) {
+                System.out.println("Ator(a) " + (i + 1) + ": " + classe.getCast()[i]);
+            }
+        }
+       
+        if (classe.getDateString().equals("1010-10-10")) {
+            System.out.println("Data adicionada: Sem data");
+        } else {
+            System.out.println("Data adicionada: " + classe.getDate_added());
+        }
+        System.out.println("Lançamento: " + classe.getRelease_year());
+
+        System.out.println("___"); // 
+        System.out.println();
     }
 
 }
