@@ -52,7 +52,7 @@ public class Main{
 
             switch (menu1) {
                 case 0:
-                    System.out.println("Saindo...");
+                    System.out.println("Sair...");
                     sair = true;
                 break;
 
@@ -136,6 +136,7 @@ public class Main{
 
                      // case 2 (ler registro)
                      // case 3 (atualizar registro)
+                    // delete
 
             }
 

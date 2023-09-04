@@ -14,6 +14,7 @@ public class Classe {
     private String[] director, cast;
     String date;
     private LocalDate date_added;
+    //String date_added;
 
     // Construtores ---------------------------------- 
     public Classe(){
