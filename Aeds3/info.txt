@@ -1,9 +1,0 @@
-hex editor 
-
-fazer read e update
-arrumar delete
-
-fazer a Main
-arrumar a Main
-
-
